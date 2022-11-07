@@ -26,9 +26,9 @@
 - Установить Redis через докер docker run -d -p 6379:6379 redis
 - В файле settings.py установить порты для Redis в поля REDIS_HOST и REDIS_PORT, установить порты для Celery, если используете другого брокера. Выставить Емейлы для полуения отчётов
 - Запустить командой python manage.py runserver
-- Во втором терминале запустить Celery командой celery -A Notification_Service worker -l info
+- Во втором терминале запустить Celery командой celery -A UniversityService worker -l info
 - На вкладке api/v1/docs/ доступна документация Swagger UI по API
 
 ## Возможные проблемы:
 
--Если в Celery воркеры получают задачу, но не выполняют её, попробуйте запустить Celery через celery -A Notification_Service worker -l info -P eventlet
+-Если в Celery воркеры получают задачу, но не выполняют её, попробуйте запустить Celery через celery -A UniversityService worker -l info -P eventlet
